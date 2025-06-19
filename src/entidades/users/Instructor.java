@@ -1,4 +1,4 @@
-package users;
+package entidades.users;
 
 public class Instructor extends Usuario {
 	

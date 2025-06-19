@@ -1,9 +1,9 @@
-package cursos;
+package entidades.cursos;
 
 import java.util.ArrayList;
 
-import users.Instructor;
-import users.Subscriptor;
+import entidades.users.Instructor;
+import entidades.users.Subscriptor;
 
 public class Curso {
 

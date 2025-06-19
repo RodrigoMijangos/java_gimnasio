@@ -1,4 +1,4 @@
-package users;
+package entidades.users;
 
 public class Usuario {
 	
@@ -61,6 +61,36 @@ public class Usuario {
 		return IDENTIFICADOR;
 	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		
+		if(super.equals(obj)) {
+			return true;
+		}
+		
+		if(obj instanceof Usuario) {
+			if(this.IDENTIFICADOR != ((Usuario)obj).getIDENTIFICADOR()) {
+				if(
+					this.nombre.equals(((Usuario)obj).getNombre()) &&
+					this.apellidos.equals(((Usuario)obj).getApellidos())
+					) {
+					return true;
+				}
+			}
+			return true;
+		}
+		
+		return false;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder msg = new StringBuilder();
+		msg.append("ID: ").append(this.IDENTIFICADOR).append("\n");
+		msg.append("Nombre completo: ").append(this.nombre).append(" ").append(this.apellidos).append("\n");
+		msg.append("Contacto: ").append(this.contacto).append("\n");
+		return msg.toString();
+	}
 	
 
 }

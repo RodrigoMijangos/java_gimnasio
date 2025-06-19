@@ -1,8 +1,8 @@
-package users;
+package entidades.users;
 
 import java.util.ArrayList;
 
-import cursos.Curso;
+import entidades.cursos.Curso;
 
 public class Subscriptor extends Usuario {
 	
